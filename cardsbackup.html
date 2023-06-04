@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de Memória</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .memory-card {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .front-face {
+      transform: rotateY(0deg);
+    }
+
+    .back-face {
+      transform: rotateY(180deg);
+    }
+
+    .memory-card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .memory-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jogo de Memória</h1>
+  <div class="game-container">
+    <div class="memory-card" data-framework="a">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 1">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro1.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="b">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 2">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro2.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="c">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 3">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro3.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="a">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 1">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro1.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="b">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 2">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro2.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="c">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 3">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro3.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div> 
+    <div class="memory-card" data-framework="a">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 1">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro4.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="b">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 2">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro5.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="c">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 3">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro6.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="a">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 1">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro4.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="b">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 2">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro5.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div>
+    <div class="memory-card" data-framework="c">
+      <div class="card-inner">
+        <div class="face front-face">
+          <img src="img/frente.png" alt="Card 3">
+        </div>
+        <div class="face back-face">
+          <img src="img/perro6.jpg" alt="Card Back">
+        </div>
+      </div>
+    </div> 
+    <!-- Adicione mais cartas aqui -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
